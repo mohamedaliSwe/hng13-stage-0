@@ -8,8 +8,8 @@ app = FastAPI()
 
 
 class UserData(BaseModel):
-    name: str
     email: str
+    name: str
     stack: str
 
 
@@ -33,9 +33,9 @@ async def get_profile():
         cat_fact = "Couldn't fetch cat fact, try again"
 
     user = UserData(
+        email="mohamedcali350@gmail.com",
         name="Mohamed Ali",
-        email="mohamedcali@gmail.com",
-        stack="Python/Fastapi",
+        stack="Python/FastAPI"
     )
 
     return ResponseModel(
